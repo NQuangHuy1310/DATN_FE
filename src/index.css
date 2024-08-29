@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Tham khảo bảng màu ở đây
+:root {
+    --warning: #ffc936; /* Màu cảnh báo */
+    --white: #fff; /* Màu trắng */
+    --black: #333; /* Màu đen */
+
+    /* Callouts */
+    --callouts-background-primary-strong: #002761; /* Nền mạnh cho thông báo chính */
+    --callouts-background-primary: #0056d2; /* Nền cho thông báo chính */
+    --callouts-background-tertiary-weak: #fff4e8; /* Nền yếu cho thông báo phụ */
+    --callouts-background-secondary-weak: #f9f5ff; /* Nền yếu cho thông báo phụ */
+    --callouts-background-primary-weak: #3587fc; /* Nền yếu cho thông báo chính */
+    --callouts-tertiary-invert: #ffccf5; /* Màu đảo ngược cho thông báo ba */
+    --callouts-secondary-invert: #ffc936; /* Màu đảo ngược cho thông báo phụ */
+    --callouts-tertiary: #003b8f; /* Màu cho thông báo ba */
+    --callouts-secondary: #340385; /* Màu cho thông báo phụ */
+
+    /* Feedback */
+    --feedback-background-warning-weak: #fff4e8; /* Nền yếu cho cảnh báo */
+    --feedback-background-informative-weak: #f0f6ff; /* Nền yếu cho thông tin */
+    --feedback-background-success-weak: #ebfdf8; /* Nền yếu cho thành công */
+    --feedback-background-error-weak: #fdf5f5; /* Nền yếu cho lỗi */
+    --feedback-warning: #a32e00; /* Màu cảnh báo */
+    --feedback-informative: #0056d2; /* Màu thông tin */
+    --feedback-success-invert-weak: #22a880; /* Màu đảo ngược yếu cho thành công */
+    --feedback-success-hover: #095941; /* Màu khi hover cho thành công */
+    --feedback-success: #087051; /* Màu chính cho thành công */
+    --feedback-error-invert-weak: #fce5e8; /* Màu đảo ngược yếu cho lỗi */
+    --feedback-error-hover: #9e0018; /* Màu khi hover cho lỗi */
+    --feedback-error: #d30a28; /* Màu chính cho lỗi */
+
+    /* Neutral */
+    --neutral-background-primary: #ffffff; /* Nền chính */
+    --neutral-background-primary-weak: #f2f5fa; /* Nền yếu */
+    --neutral-stroke-primary-invert: #ffffff; /* Đường viền đảo ngược */
+    --neutral-stroke-primary-weak: #e8eef7; /* Đường viền yếu */
+    --neutral-stroke-primary: #a7b4c9; /* Đường viền chính */
+    --neutral-disabled-weak: #f2f5fa; /* Màu yếu cho phần tử bị vô hiệu hóa */
+    --neutral-disabled-strong: #c1cad9; /* Màu mạnh cho phần tử bị vô hiệu hóa */
+    --neutral-disabled: #e8eef7; /* Màu mặc định cho phần tử bị vô hiệu hóa */
+    --neutral-primary-invert: #ffffff; /* Màu đảo ngược chính */
+    --neutral-primary-weak: #5b6780; /* Màu yếu chính */
+    --neutral-primary: #0f1114; /* Màu chính */
+
+    /* Interactive */
+    --interactive-background-primary-selected-weak: #f9f5ff; /* Nền yếu khi chọn */
+    --interactive-background-primary-pressed-weak: #f9f5ff; /* Nền yếu khi nhấn */
+    --interactive-background-primary-hover-weak: #f0f6ff; /* Nền yếu khi hover */
+    --interactive-stroke-primary-focus-invert: #f0f6ff; /* Đường viền khi tập trung, đảo ngược */
+    --interactive-stroke-primary-focus: #6923de; /* Đường viền khi tập trung */
+    --interactive-primary-selected: #340385; /* Màu khi chọn */
+    --interactive-primary-pressed: #340385; /* Màu khi nhấn */
+    --interactive-primary-hover: #0048b0; /* Màu khi hover */
+    --interactive-primary: #0056d2; /* Màu chính */
+}
+
+@layer base {
+}
+
+@layer components {
+}
+
+@layer utilities {
+}
