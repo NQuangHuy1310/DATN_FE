@@ -1,13 +1,14 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, ChangeEvent } from 'react';
 import Input from '../../../components/input/Input';
 import { Button } from '../../../components/button/Button';
 import { Link } from 'react-router-dom';
+import { HandleChangeEvent, HandleKeyDownEvent, IndexType } from '.';
 
 const Verify = () => {
     const [code, setCode] = useState(['', '', '', '']);
     const inputs = useRef([]);
 
-    const handleChange = (e, index) => {
+    const handleChange = (e: HandleChangeEvent, index: IndexType) => {
         const value = e.target.value;
         if (/^[0-9]$/.test(value)) {
             const newCode = [...code];
@@ -19,7 +20,7 @@ const Verify = () => {
         }
     };
 
-    const handleKeyDown = (e, index) => {
+    const handleKeyDown = (e: HandleKeyDownEvent, index: IndexType) => {
         if (e.key === "Backspace") {
             if (code[index] === '') {
                 if (index > 0) {
