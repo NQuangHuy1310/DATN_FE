@@ -3,13 +3,13 @@ import { FaFacebook } from "react-icons/fa"
 import { FcGoogle } from "react-icons/fc"
 import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5"
 import { Link } from "react-router-dom"
-import { Button } from "../../components/button/Button"
-import Input from "../../components/input/Input"
+import { Button } from "../../../components/button/Button"
+import Input from "../../../components/input/Input"
 import { useState } from "react"
-import config from "../../config"
+import config from "../../../config"
 
 
-const Login = () => {
+const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -17,13 +17,13 @@ const Login = () => {
     return (
 
         <div className="relative h-screen">
-            <div className="w-full max-w-[456px] h-auto p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl shadow absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white">
+            <div className="w-full max-w-[456px] h-auto p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl shadow absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white ">
                 <div>
-                    <h1 className="font-bold text-DSM text-center">Đăng nhập</h1>
+                    <h1 className="font-bold text-DSM text-center">Đăng ký</h1>
                     <p className="my-5 text-center text-gray-400">
-                        Bạn chưa có tài khoản?
-                        <Link className="text-callouts-background-primary" to={config.routes.home}>
-                            {' '} Đăng ký
+                        Bạn đã có tài khoản?
+                        <Link className="text-callouts-background-primary" to={config.routes.login}>
+                            {' '} Đăng nhập
                         </Link>
                     </p>
                 </div>
@@ -42,6 +42,19 @@ const Login = () => {
                 </div>
                 <div className="flex items-center justify-center">
                     <form action="" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
+                        <div className="w-full mb-4">
+                            <label htmlFor="fullName" className="font-medium text-TMD">
+                                Họ và tên
+                            </label>
+                            <Input
+                                type="text"
+                                placeholder="Họ và tên"
+                                name="fullName"
+                                id="fullName"
+                                className="w-full mt-2"
+                            />
+                        </div>
+
                         <div className="w-full mb-4">
                             <label htmlFor="email" className="font-medium text-TMD">
                                 Email
@@ -77,19 +90,37 @@ const Login = () => {
                                 />
                             )}
                         </div>
-                        <div className="flex justify-between items-center mb-4">
-                            <div className="flex items-center">
-                                <Input type="checkbox" className=" w-3 h-3  bg-gray-100 border-gray-300 rounded focus:ring-1 focus:ring-blue-500" />
-                                <span className="ml-2 text-TSM text-gray-400 font-medium">Ghi nhớ</span>
-                            </div>
-                            <div>
-                                <Link to={"/abc"} className="text-callouts-background-primary font-medium text-TSM">
-                                    Quên mật khẩu?
-                                </Link>
-                            </div>
+                        <div className="w-full relative mb-4">
+                            <label htmlFor="password" className="font-medium text-TMD">
+                                Xác nhận mật khẩu
+                            </label>
+                            <Input
+                                type={showPassword ? "text" : "password"} // Thay đổi type dựa trên state
+                                name="password"
+                                id="password"
+                                placeholder="Xác nhận mật khẩu"
+                                className="w-full mt-2"
+                            />
+                            {showPassword ? (
+                                <IoEyeOffSharp
+                                    onClick={togglePasswordVisibility}
+                                    className="absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500"
+                                />
+                            ) : (
+                                <IoEyeSharp
+                                    onClick={togglePasswordVisibility}
+                                    className="absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500"
+                                />
+                            )}
                         </div>
+
+                        <div className="flex items-center mb-5">
+                            <Input type="checkbox" className=" w-3 h-3  bg-gray-100 border-gray-300 rounded focus:ring-1 focus:ring-blue-500" />
+                            <span className="ml-2 text-TSM text-gray-400 ">Tôi đồng ý với <Link to={''} className="text-callouts-background-primaryWeak">điều khoản</Link></span>
+                        </div>
+
                         <div>
-                            <Button className="w-full">Đăng nhập</Button>
+                            <Button className="w-full">Đăng ký</Button>
                         </div>
                     </form>
                 </div>
@@ -100,4 +131,4 @@ const Login = () => {
 };
 
 
-export default Login
+export default Register
