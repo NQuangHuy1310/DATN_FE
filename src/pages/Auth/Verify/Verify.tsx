@@ -1,21 +1,25 @@
-import React, { useState, useRef, ChangeEvent } from 'react';
-import Input from '../../../components/input/Input';
-import { Button } from '../../../components/button/Button';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from '../../../components/button/Button';
+import Input from '../../../components/input/Input';
 import { HandleChangeEvent, HandleKeyDownEvent, IndexType } from '.';
 
 const Verify = () => {
-    const [code, setCode] = useState(['', '', '', '']);
-    const inputs = useRef([]);
+    const [code, setCode] = useState<string[]>(['', '', '', '']);
 
+    // Sử dụng useRef để lưu các input, cho phép HTMLInputElement hoặc null
+    const inputs = useRef<(HTMLInputElement | null)[]>([]);
+
+    // Thêm type cho e và index
     const handleChange = (e: HandleChangeEvent, index: IndexType) => {
         const value = e.target.value;
         if (/^[0-9]$/.test(value)) {
             const newCode = [...code];
             newCode[index] = value;
             setCode(newCode);
-            if (index < inputs.current.length - 1) {
-                inputs.current[index + 1].focus();
+            // Kiểm tra ref trước khi gọi focus()
+            if (index < inputs.current.length - 1 && inputs.current[index + 1]) {
+                inputs.current[index + 1]?.focus();
             }
         }
     };
@@ -23,8 +27,8 @@ const Verify = () => {
     const handleKeyDown = (e: HandleKeyDownEvent, index: IndexType) => {
         if (e.key === "Backspace") {
             if (code[index] === '') {
-                if (index > 0) {
-                    inputs.current[index - 1].focus();
+                if (index > 0 && inputs.current[index - 1]) {
+                    inputs.current[index - 1]?.focus();
                 }
             } else {
                 const newCode = [...code];
@@ -50,7 +54,7 @@ const Verify = () => {
                             <Input
                                 key={index}
                                 type="text"
-                                maxLength="1"
+                                maxLength={1}
                                 value={digit}
                                 onChange={(e) => handleChange(e, index)}
                                 onKeyDown={(e) => handleKeyDown(e, index)}
@@ -59,11 +63,11 @@ const Verify = () => {
                             />
                         ))}
                     </div>
-                    <Button className="w-full text-white py-2 rounded-lg">
+                    <Button className="w-full">
                         Gửi
                     </Button>
                     <p className="text-center text-gray-500 mt-4">
-                        Bạn không nhận được mã? <Link to={'S'} className="text-blue-500">Gửi lại</Link>
+                        Không nhận được mã? <Link to={''} className="text-blue-500">Gửi lại</Link>
                     </p>
                 </form>
             </div>
