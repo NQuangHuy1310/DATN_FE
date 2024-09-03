@@ -58,7 +58,7 @@ const Header = () => {
                         <HiOutlineViewGrid className="text-TLG" />
                         <span className="text-TSM">Danh mục</span>
                     </div>
-                    <div className="absolute bg-white shadow-lg top-full left-0 w-[200px] opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                    <div className="absolute bg-white shadow-lg top-full left-0 w-[200px] opacity-0 translate-y-4 transition-all duration-300 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
                         <nav className="w-full">
                             <ul className="*:text-TSM *:px-2">
                                 <li>
@@ -129,7 +129,7 @@ const Header = () => {
                                 <Input
                                     type="text"
                                     placeholder="Tìm kiếm"
-                                    className="text-T2XS lg:text-TSM bg-neutral-background-primaryWeak w-full"
+                                    className="text-T2XS lg:text-TSM bg-neutral-background-primaryWeak w-full pe-7"
                                 />
                                 <HiSearch className="absolute top-[50%] translate-y-[-50%] text-TLG right-2 cursor-pointer text-callouts-background-primary" />
                             </div>
