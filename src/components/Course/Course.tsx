@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaStar } from 'react-icons/fa'
-import { Button } from '../../../components/button/Button'
+import { Button } from '../button/Button'
 
 const Course: React.FC = () => {
     const [hoverDirection, setHoverDirection] = useState<string>('')
