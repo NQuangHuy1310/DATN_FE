@@ -27,6 +27,7 @@ const Header = () => {
             setMenuToggle(false)
         }
     }
+
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside)
         window.addEventListener('resize', () => setMenuToggle(false))
@@ -37,7 +38,7 @@ const Header = () => {
     }, [])
 
     return (
-        <header className="bg-white shadow-lg w-full">
+        <header className="bg-white shadow-lg w-full fixed z-50 top-0 left-0">
             <div className="max-w-5xl relative mx-auto grid grid-cols-12 gap-4 px-4 items-center">
                 {/* Show menu */}
                 <div
@@ -150,7 +151,7 @@ const Header = () => {
                 {/* Overlay */}
                 <div
                     ref={overlayRef}
-                    className={`fixed inset-0 bg-black bg-opacity-70 transition-opacity duration-300 ${
+                    className={`fixed top-0 inset-0 bg-black bg-opacity-70 transition-opacity duration-300 ${
                         menutoggle ? 'opacity-100' : 'opacity-0 pointer-events-none'
                     }`}
                     onClick={() => setMenuToggle(false)}
@@ -158,7 +159,7 @@ const Header = () => {
                 {/* Menu repon */}
                 <div
                     ref={menuRef}
-                    className={`absolute lg:hidden block p-2 top-0 min-h-screen bg-callouts-background-primary/90 z-50 w-2/5 max-w-screen transition-transform duration-300 ${
+                    className={`fixed top-0 left-0 z-50 p-2 min-h-screen bg-callouts-background-primary/90 w-2/5 max-w-screen transition-transform duration-300 ${
                         menutoggle ? 'translate-x-0' : '-translate-x-full'
                     }`}
                 >
