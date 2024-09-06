@@ -1,5 +1,6 @@
 import config from '../config'
-import AuthLayout from '../layouts/AuthLayout'
+import AuthLayout from '../layouts/AuthLayout/AuthenLayout'
+import ProfileLayout from '../layouts/AuthLayout/ProfileLayout'
 import HomeLayout from '../layouts/HomeLayout'
 import ForgotPassword from '../pages/Auth/ForgotPassword'
 import Login from '../pages/Auth/Login'
@@ -15,7 +16,7 @@ export const publicRoutes = [
     { path: config.routes.register, layout: AuthLayout, element: Register },
     { path: config.routes.forgotPassword, layout: AuthLayout, element: ForgotPassword },
     { path: config.routes.verify, layout: AuthLayout, element: Verify },
-    { path: config.routes.profile, layout: HomeLayout, element: Profile }
+    { path: config.routes.profile, layout: ProfileLayout, element: Profile }
 ]
 
 // Route cần đăng nhập mới vào được
