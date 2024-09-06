@@ -4,7 +4,7 @@ const routes = {
     register: '/dang-ky',
     forgotPassword: '/quen-mat-khau',
     verify: '/xac-thuc',
-    profile: '/thong-tin-ca-nhan'
+    profile: '/cai-dat/thong-tin-ca-nhan'
 }
 
 export default routes
