@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-
-import { Button } from '../../components/button/Button'
-import Category from '../../components/Category'
-import Course from '../../components/Course/Course'
-
 import { HiArrowNarrowRight } from 'react-icons/hi'
-import SliderComponent from '../../components/Slider/Slider'
+
+import { Button } from '~/components/ui/button/Button'
+import Category from '~/components/shared/Category'
+import Course from '~/components/shared/Course/Course'
+import SliderComponent from '~/components/shared/Slider/Slider'
 
 const Home: React.FC = () => {
     const [activeTab, setActiveTab] = useState<string>('1')
@@ -14,7 +13,7 @@ const Home: React.FC = () => {
     }
 
     return (
-        <div className="max-w-5xl mx-auto px-3">
+        <div>
             <div className="grid grid-cols-12 gap-5 items-center py-3">
                 <div className="md:col-span-7 col-span-12 order-2 md:order-1 text-center md:text-left">
                     <h1 className="lg:text-DLG md:text-DMD font-bold text-DSM">

@@ -1,21 +1,20 @@
-import { FaFacebook } from "react-icons/fa"
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { FcGoogle } from 'react-icons/fc'
+import { FaFacebook } from 'react-icons/fa'
+import { IoEyeOffSharp, IoEyeSharp } from 'react-icons/io5'
 
-import { FcGoogle } from "react-icons/fc"
-import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5"
-import { Link } from "react-router-dom"
-import { Button } from "../../../components/button/Button"
-import Input from "../../../components/input/Input"
-import { useState } from "react"
-import config from "../../../config"
-
+import config from '~/config'
+import { Button } from '~/components/ui/button/Button'
+import Input from '~/components/ui/input/Input'
 
 const Register = () => {
-    const [showPassword, setShowPassword] = useState(false);
-    const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
-    };
-    return (
+    const [showPassword, setShowPassword] = useState(false)
 
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword)
+    }
+    return (
         <div className="relative h-screen">
             <div className="w-full max-w-[456px] h-auto p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl shadow absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white ">
                 <div>
@@ -23,15 +22,16 @@ const Register = () => {
                     <p className="my-5 text-center text-gray-400">
                         Bạn đã có tài khoản?
                         <Link className="text-callouts-background-primary" to={config.routes.login}>
-                            {' '} Đăng nhập
+                            {' '}
+                            Đăng nhập
                         </Link>
                     </p>
                 </div>
                 <div className="flex gap-3 justify-center mb-3">
-                    <div className="w-20 h-10 sm:w-24 sm:h-11 rounded-xl py-2 px-6 border">
+                    <div className="w-20 h-10 sm:w-24 sm:h-11 rounded-xl py-2 px-6 border cursor-pointer bg-white hover:bg-opacity-60">
                         <FaFacebook className="w-6 h-6 mx-auto text-callouts-background-primary" />
                     </div>
-                    <div className="w-20 h-10 sm:w-24 sm:h-11 rounded-xl py-2 px-6 border">
+                    <div className="w-20 h-10 sm:w-24 sm:h-11 rounded-xl py-2 px-6 border cursor-pointer bg-white hover:bg-opacity-60">
                         <FcGoogle className="w-6 h-6 mx-auto" />
                     </div>
                 </div>
@@ -59,20 +59,14 @@ const Register = () => {
                             <label htmlFor="email" className="font-medium text-TMD">
                                 Email
                             </label>
-                            <Input
-                                type="text"
-                                placeholder="Email"
-                                name="email"
-                                id="email"
-                                className="w-full mt-2"
-                            />
+                            <Input type="text" placeholder="Email" name="email" id="email" className="w-full mt-2" />
                         </div>
                         <div className="w-full relative mb-4">
                             <label htmlFor="password" className="font-medium text-TMD">
                                 Mật khẩu
                             </label>
                             <Input
-                                type={showPassword ? "text" : "password"} // Thay đổi type dựa trên state
+                                type={showPassword ? 'text' : 'password'} // Thay đổi type dựa trên state
                                 name="password"
                                 id="password"
                                 placeholder="Mật khẩu"
@@ -95,7 +89,7 @@ const Register = () => {
                                 Xác nhận mật khẩu
                             </label>
                             <Input
-                                type={showPassword ? "text" : "password"} // Thay đổi type dựa trên state
+                                type={showPassword ? 'text' : 'password'} // Thay đổi type dựa trên state
                                 name="password"
                                 id="password"
                                 placeholder="Xác nhận mật khẩu"
@@ -115,8 +109,14 @@ const Register = () => {
                         </div>
 
                         <div className="flex items-center mb-5">
-                            <Input type="checkbox" className=" w-3 h-3  bg-gray-100 border-gray-300 rounded focus:ring-1 focus:ring-blue-500" />
-                            <span className="ml-2 text-TSM text-gray-400 ">Tôi đồng ý với <Link to={''} className="text-callouts-background-primaryWeak">điều khoản</Link></span>
+                            <Input
+                                type="checkbox"
+                                className=" w-3 h-3  bg-gray-100 border-gray-300 rounded focus:ring-1 focus:ring-blue-500"
+                                id="agree"
+                            />
+                            <label htmlFor="agree" className="ml-2 text-TSM text-gray-400 cursor-pointer">
+                                Tôi đồng ý với điều khoản
+                            </label>
                         </div>
 
                         <div>
@@ -126,9 +126,7 @@ const Register = () => {
                 </div>
             </div>
         </div>
-
-    );
-};
-
+    )
+}
 
 export default Register

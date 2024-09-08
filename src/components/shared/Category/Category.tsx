@@ -1,5 +1,5 @@
 import React from 'react'
-import { ICategory } from '../../types/ICategory'
+import { ICategory } from '~/types'
 
 const Category: React.FC<ICategory> = ({ title, image, slug }) => {
     return (

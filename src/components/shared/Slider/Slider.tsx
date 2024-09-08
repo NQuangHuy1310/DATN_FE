@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-
 import Slider from 'react-slick'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 
@@ -55,16 +54,10 @@ const SliderComponent: React.FC<SliderProps> = ({ children, slideShow }) => {
             <Slider {...settings} ref={sliderRef}>
                 {children}
             </Slider>
-            <div
-                className="absolute top-[44%] -left-4 bg-callouts-background-primary/60 rounded-full p-1.5 cursor-pointer"
-                onClick={previous}
-            >
-                <HiChevronLeft className="size-5 text-white" />
+            <div className="absolute top-[44%] -left-5 bg-black/70 rounded-full p-2 cursor-pointer" onClick={previous}>
+                <HiChevronLeft className="size- text-white" />
             </div>
-            <div
-                className="absolute top-[44%] -right-3 bg-callouts-background-primary/60 rounded-full p-1.5 cursor-pointer"
-                onClick={next}
-            >
+            <div className="absolute top-[44%] -right-5 bg-black/70 rounded-full p-2 cursor-pointer" onClick={next}>
                 <HiChevronRight className="size-5 text-white" />
             </div>
         </div>

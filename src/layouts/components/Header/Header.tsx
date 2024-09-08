@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom'
-import Input from '../../../components/input/Input'
-import { Button } from '../../../components/button/Button'
-import { HiOutlineViewGrid, HiSearch, HiChevronRight, HiOutlineMenuAlt1 } from 'react-icons/hi'
-import { FaShoppingCart } from 'react-icons/fa'
-import config from '../../../config'
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { FaShoppingCart } from 'react-icons/fa'
+import { HiOutlineViewGrid, HiSearch, HiChevronRight, HiOutlineMenuAlt1 } from 'react-icons/hi'
+
+import config from '~/config'
+import { Button } from '~/components/ui/button/Button'
+import Input from '~/components/ui/input/Input'
 
 const Header = () => {
     const [menutoggle, setMenuToggle] = useState<boolean>(false)
@@ -39,7 +40,7 @@ const Header = () => {
 
     return (
         <header className="bg-white shadow-lg w-full fixed z-50 top-0 left-0">
-            <div className="max-w-5xl relative mx-auto grid grid-cols-12 gap-4 px-4 items-center">
+            <div className="max-w-screen-xl relative mx-auto grid grid-cols-12 gap-4 px-4 items-center">
                 {/* Show menu */}
                 <div
                     className="lg:hidden block col-span-4 md:col-span-3 w-fit cursor-pointer"
@@ -48,11 +49,13 @@ const Header = () => {
                     <HiOutlineMenuAlt1 size={25} />
                 </div>
                 <div className="lg:col-span-2 max-w-[115px] col-span-4 md:col-span-3 mx-auto md:mx-0 py-4">
-                    <img
-                        className="w-full"
-                        src="https://bizweb.dktcdn.net/100/453/393/themes/894913/assets/logo.png?1707187039390"
-                        alt="logo"
-                    />
+                    <Link to={config.routes.home}>
+                        <img
+                            className="w-full"
+                            src="https://bizweb.dktcdn.net/100/453/393/themes/894913/assets/logo.png?1707187039390"
+                            alt="logo"
+                        />
+                    </Link>
                 </div>
                 <div className="col-span-2 h-full lg:flex hidden items-center font-semibold w-fit relative group">
                     <div className="flex items-center mx-auto gap-2 cursor-pointer text-callouts-background-primary">
@@ -146,7 +149,9 @@ const Header = () => {
                     <Button to={config.routes.login} variant="primary">
                         Đăng nhập
                     </Button>
-                    <Button variant="secondary">Đăng ký</Button>
+                    <Button to={config.routes.register} variant="secondary">
+                        Đăng ký
+                    </Button>
                 </div>
                 {/* Overlay */}
                 <div
