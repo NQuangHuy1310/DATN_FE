@@ -63,7 +63,7 @@ const Course: React.FC = () => {
                 </div>
             </div>
             <div
-                className={`absolute top-0 ${hoverDirection} top-[50%] translate-y-[-50%] -left-2 shadow-sm invisible group-hover:visible duration-300 ease-in-out opacity-0 group-hover:opacity-100 bg-white p-4 border border-gray-300 group-hover:z-[999] md:w-56 w-48`}
+                className={`absolute top-0 ${hoverDirection} top-[50%] translate-y-[-50%] -left-2 shadow-sm invisible group-hover:visible duration-300 ease-in-out opacity-0 group-hover:opacity-100 bg-white p-4 border border-gray-300 group-hover:z-40 md:w-56 w-48`}
             >
                 <h2 className="md:text-TMD text-TSM font-bold text-black line-clamp-3">
                     100 Days of Code: The Complete Python Pro Bootcamp
@@ -83,7 +83,7 @@ const Course: React.FC = () => {
                     games and apps!
                 </p>
                 <Button size="md" variant="primary" className="w-full text-white">
-                    Add To Card
+                    Xem chi tiết
                 </Button>
             </div>
         </div>

@@ -72,15 +72,21 @@
         transition: all 0.3s ease;
     }
 
+    .clip-path {
+        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    }
+
     /* Config scrollbar */
     ::-webkit-scrollbar {
-        width: 4px;
-        height: 4px;
+        width: 6px;
+        height: 6px;
+        opacity: 1;
     }
 
     ::-webkit-scrollbar-thumb {
         background-color: #0056d2;
         border-radius: 50px;
+        opacity: 0.5;
     }
 }
 
