@@ -3,11 +3,12 @@ import { FaRegBell } from 'react-icons/fa'
 import { FaCircleUser } from 'react-icons/fa6'
 import { LuLock } from 'react-icons/lu'
 import { Link } from 'react-router-dom'
-import config from '../../../config'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 
-const ProfileLayout = ({ children, title }: { children: ReactNode, title: string }) => {
+import config from '~/config'
+import Header from '~/layouts/components/Header'
+import Footer from '~/layouts/components/Footer'
+
+const ProfileLayout = ({ children, title }: { children: ReactNode; title: string }) => {
     return (
         <div>
             <Header />
@@ -40,13 +41,10 @@ const ProfileLayout = ({ children, title }: { children: ReactNode, title: string
                         </Link>
                     </ul>
                 </aside>
-                <main className='md:flex-1 lg:px-10 pb-5'>
-                    {children}
-                </main>
+                <main className="md:flex-1 lg:px-10 pb-5">{children}</main>
             </div>
             <Footer />
         </div>
-
     )
 }
 

@@ -1,24 +1,21 @@
-import { useRef, useState } from "react"
+import { useRef, useState } from 'react'
+import { IoEyeOffSharp, IoEyeSharp } from 'react-icons/io5'
 
-import { FcGoogle } from "react-icons/fc"
-import { FaFacebookSquare } from "react-icons/fa"
-import { IoEyeOffSharp, IoEyeSharp } from "react-icons/io5"
-
-import Input from "../../components/input/Input"
-import { Button } from "../../components/button/Button"
+import { Button } from '~/components/ui/button/Button'
+import Input from '~/components/ui/input/Input'
 
 const Profile = () => {
-    const fileInputRef = useRef<HTMLInputElement>(null);
+    const fileInputRef = useRef<HTMLInputElement>(null)
     const handleClick = () => {
         if (fileInputRef.current) {
-            fileInputRef.current.click();
+            fileInputRef.current.click()
         }
-    };
+    }
 
-    const [showPassword, setShowPassword] = useState(false);
+    const [showPassword, setShowPassword] = useState(false)
     const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
-    };
+        setShowPassword(!showPassword)
+    }
 
     return (
         <div className="">
@@ -29,15 +26,14 @@ const Profile = () => {
                         <h1 className="text-DXS mb-3">Hồ sơ của tôi</h1>
                         <div className="border-2 rounded-lg flex flex-col md:flex-row gap-4 p-4 max-w-[660px]">
                             <div className="relative">
-                                <img src="https://via.placeholder.com/80" className="w-20 h-20 rounded-lg object-cover" alt="Profile" />
+                                <img
+                                    src="https://via.placeholder.com/80"
+                                    className="w-20 h-20 rounded-lg object-cover"
+                                    alt="Profile"
+                                />
                             </div>
                             <div className="flex-grow">
-                                <Input
-                                    type="file"
-                                    ref={fileInputRef}
-                                    style={{ display: 'none' }}
-                                    accept="*"
-                                />
+                                <Input type="file" ref={fileInputRef} style={{ display: 'none' }} accept="*" />
                                 <div className="flex gap-4">
                                     <Button
                                         className="border border-blue-500 bg-blue-500 text-white py-2 px-4 rounded-xl hover:bg-blue-600"
@@ -45,9 +41,7 @@ const Profile = () => {
                                     >
                                         Tải ảnh lên
                                     </Button>
-                                    <Button
-                                        className="border border-red-500 text-red-500 bg-white py-2 px-4 rounded-xl hover:bg-red-500 hover:text-white"
-                                    >
+                                    <Button className="border border-red-500 text-red-500 bg-white py-2 px-4 rounded-xl hover:bg-red-500 hover:text-white">
                                         Xóa ảnh
                                     </Button>
                                 </div>
@@ -55,7 +49,6 @@ const Profile = () => {
                             </div>
                         </div>
                     </div>
-
 
                     <div className="p-5 max-w-[660px]">
                         <form>
@@ -81,7 +74,9 @@ const Profile = () => {
                             </div>
                             <div className="grid grid-cols-12 gap-4 my-3">
                                 <div className="col-span-12 md:col-span-6">
-                                    <label htmlFor="education" className="block text-sm">Trình độ học vấn</label>
+                                    <label htmlFor="education" className="block text-sm">
+                                        Trình độ học vấn
+                                    </label>
                                     <select
                                         id="education"
                                         name="education"
@@ -99,14 +94,20 @@ const Profile = () => {
                                 </div>
                             </div>
                             <div>
-                                <label htmlFor="bio" className="block">Tiểu sử</label>
-                                <textarea rows={4} id="bio" name="bio" className="w-full block p-2.5 text-sm rounded-lg border-[1px] border-neutral-stroke-primary focus:border-interactive-stroke-primaryFocus mt-2"></textarea>
+                                <label htmlFor="bio" className="block">
+                                    Tiểu sử
+                                </label>
+                                <textarea
+                                    rows={4}
+                                    id="bio"
+                                    name="bio"
+                                    className="w-full block p-2.5 text-sm rounded-lg border-[1px] border-neutral-stroke-primary focus:border-interactive-stroke-primaryFocus mt-2"
+                                ></textarea>
                             </div>
                             <Button className="my-5">Lưu thay đổi</Button>
                         </form>
                     </div>
                 </div>
-
 
                 <div className="rounded-xl text-TSM shadow mb-5">
                     <div className="p-5">
@@ -115,52 +116,64 @@ const Profile = () => {
                             <div className="w-full relative mb-4">
                                 <label htmlFor="password">Mật khẩu hiện tại</label>
                                 <Input
-                                    type={showPassword ? "text" : "password"}
+                                    type={showPassword ? 'text' : 'password'}
                                     name="password"
                                     id="password"
                                     className="w-full mt-2"
                                 />
                                 <IoEyeSharp
                                     onClick={togglePasswordVisibility}
-                                    className={`absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500 ${showPassword ? "hidden" : "block"}`}
+                                    className={`absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500 ${
+                                        showPassword ? 'hidden' : 'block'
+                                    }`}
                                 />
                                 <IoEyeOffSharp
                                     onClick={togglePasswordVisibility}
-                                    className={`absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500 ${showPassword ? "block" : "hidden"}`}
+                                    className={`absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500 ${
+                                        showPassword ? 'block' : 'hidden'
+                                    }`}
                                 />
                             </div>
                             <div className="w-full relative mb-4">
                                 <label htmlFor="new_password">Mật khẩu mới</label>
                                 <Input
-                                    type={showPassword ? "text" : "password"}
+                                    type={showPassword ? 'text' : 'password'}
                                     name="new_password"
                                     id="new_password"
                                     className="w-full mt-2"
                                 />
                                 <IoEyeSharp
                                     onClick={togglePasswordVisibility}
-                                    className={`absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500 ${showPassword ? "hidden" : "block"}`}
+                                    className={`absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500 ${
+                                        showPassword ? 'hidden' : 'block'
+                                    }`}
                                 />
                                 <IoEyeOffSharp
                                     onClick={togglePasswordVisibility}
-                                    className={`absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500 ${showPassword ? "block" : "hidden"}`}
+                                    className={`absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500 ${
+                                        showPassword ? 'block' : 'hidden'
+                                    }`}
                                 />
                             </div>
                             <div className="w-full relative mb-4">
                                 <label htmlFor="confirm_password">Xác nhận mật khẩu</label>
                                 <Input
-                                    type={showPassword ? "text" : "password"}
+                                    type={showPassword ? 'text' : 'password'}
                                     name="confirm_password"
                                     id="confirm_password"
                                     className="w-full mt-2"
                                 />
                                 <IoEyeSharp
                                     onClick={togglePasswordVisibility}
-                                    className={`absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500 ${showPassword ? "hidden" : "block"}`}
+                                    className={`absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500 ${
+                                        showPassword ? 'hidden' : 'block'
+                                    }`}
                                 />
                                 <IoEyeOffSharp
                                     onClick={togglePasswordVisibility}
-                                    className={`absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500 ${showPassword ? "block" : "hidden"}`}
+                                    className={`absolute right-3 top-1/2 transform translate-y-1/2 cursor-pointer text-gray-500 ${
+                                        showPassword ? 'block' : 'hidden'
+                                    }`}
                                 />
                             </div>
                             <Button className="my-5">Lưu thay đổi</Button>
@@ -201,9 +214,8 @@ const Profile = () => {
                     </div>
                 </div> */}
             </div>
-
         </div>
-    );
-};
+    )
+}
 
-export default Profile;
+export default Profile

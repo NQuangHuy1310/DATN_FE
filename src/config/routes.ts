@@ -1,10 +1,10 @@
 const routes = {
     home: '/',
-    login: '/dang-nhap',
-    register: '/dang-ky',
-    forgotPassword: '/quen-mat-khau',
-    verify: '/xac-thuc',
-    profile: '/cai-dat/thong-tin-ca-nhan'
+    login: '/Dang-nhap',
+    register: '/Dang-ky',
+    forgotPassword: '/Quen-mat-khau',
+    verify: '/Xac-thuc',
+    profile: '/Cai-dat/Thong-tin-ca-nhan'
 }
 
 export default routes

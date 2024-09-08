@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom'
 import { HiOutlinePhone, HiPhone, HiMail } from 'react-icons/hi'
 import { FaInstagram, FaFacebook, FaYoutube, FaMapMarked } from 'react-icons/fa'
-import Input from '../../../components/input/Input'
-import { Button } from '../../../components/button/Button'
-import { Link } from 'react-router-dom'
+
+import { Button } from '~/components/ui/button/Button'
+import Input from '~/components/ui/input/Input'
+
 const Footer = () => {
     return (
         <footer className="bg-[url('https://bizweb.dktcdn.net/100/453/393/themes/894913/assets/bg_footer.png?1707187039390')] bg-cover bg-center bg-[#000] py-10">
