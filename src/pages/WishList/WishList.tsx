@@ -1,22 +1,20 @@
 import { FaSearch, FaStar } from "react-icons/fa"
-import { Button } from "~/components/ui/button/Button"
 
 import Input from "~/components/ui/input/Input"
+import { Button } from "~/components/ui/button/Button"
 
 
 const WishList = () => {
     return (
-        <div className="pb-10">
-            <div className="bg-interactive-primary-default py-10 text-white">
+        <div className="py-2 md:py-5">
+            <div className="">
                 <div className=" max-w-screen-lg  mx-auto px-3">
                     <div className="">
                         <h1 className="text-DSM font-bold my-2">Khóa học yêu thích</h1>
                         <span>Hãy mua ngay khóa học để khám phá</span>
                     </div>
-
                 </div>
             </div>
-
             <div className="max-w-screen-lg mx-auto px-3">
                 <div className="my-6 md:my-5 ">
                     <h3 className="text-TXL font-medium">Tất cả khóa học</h3>
