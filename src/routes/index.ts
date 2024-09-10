@@ -20,7 +20,7 @@ export const publicRoutes = [
     { path: config.routes.forgotPassword, layout: HomeLayout, element: ForgotPassword },
     { path: config.routes.verify, layout: HomeLayout, element: Verify },
     { path: config.routes.profile, layout: ProfileLayout, element: Profile },
-    { path: config.routes.detailCourse, layout: HomeLayout, element: DetailCourse }
+    { path: config.routes.detailCourse, layout: HomeLayout, element: DetailCourse },
     { path: config.routes.myCourse, layout: HomeLayout, element: MyCourse },
     { path: config.routes.wishList, layout: HomeLayout, element: WishList }
 ]
