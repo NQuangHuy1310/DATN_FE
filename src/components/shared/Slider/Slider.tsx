@@ -55,7 +55,7 @@ const SliderComponent: React.FC<SliderProps> = ({ children, slideShow }) => {
                 {children}
             </Slider>
             <div className="absolute top-[44%] -left-5 bg-black/70 rounded-full p-2 cursor-pointer" onClick={previous}>
-                <HiChevronLeft className="size- text-white" />
+                <HiChevronLeft className="size-5 text-white" />
             </div>
             <div className="absolute top-[44%] -right-5 bg-black/70 rounded-full p-2 cursor-pointer" onClick={next}>
                 <HiChevronRight className="size-5 text-white" />
