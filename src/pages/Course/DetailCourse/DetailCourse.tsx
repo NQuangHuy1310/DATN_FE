@@ -7,52 +7,25 @@ import Popup from '~/components/shared/Popup'
 import Review from '~/components/shared/Review'
 import Module from '~/components/shared/Module/Module'
 import { Button } from '~/components/ui/button/Button'
+import { IModule } from '~/types/IModule'
 
-const courses = [
+const courses: IModule[] = [
     {
         title: 'Bài học 1',
         lessons: [
-            { title: 'Bài học 1.1', time: 9.25 },
-            { title: 'Bài học 1.2', time: 8.25 },
-            { title: 'Bài học 1.3', time: 7.25 },
-            { title: 'Bài học 1.4', time: 6.25 }
-        ],
-        time: 40
+            { title: 'Bài học 1.1', time: 9.25, type: 'video' },
+            { title: 'Bài học 1.2', time: 8.25, type: 'docs' },
+            { title: 'Bài học 1.3', time: 7.25, type: 'docs' },
+            { title: 'Bài học 1.4', time: 6.25, type: 'quiz' }
+        ]
     },
     {
         title: 'Bài học 2',
         lessons: [
-            { title: 'Bài học 2.1', time: 8.25 },
-            { title: 'Bài học 2.2', time: 8.25 },
-            { title: 'Bài học 2.3', time: 9.25 },
-            { title: 'Bài học 2.4', time: 15.25 }
-        ]
-    },
-    {
-        title: 'Bài học 3',
-        lessons: [
-            { title: 'Bài học 3.1', time: 8.25 },
-            { title: 'Bài học 3.2', time: 8.25 },
-            { title: 'Bài học 3.3', time: 9.25 },
-            { title: 'Bài học 3.4', time: 15.25 }
-        ]
-    },
-    {
-        title: 'Bài học 4',
-        lessons: [
-            { title: 'Bài học 4.1', time: 8.25 },
-            { title: 'Bài học 4.2', time: 8.25 },
-            { title: 'Bài học 4.3', time: 9.25 },
-            { title: 'Bài học 4.4', time: 15.25 }
-        ]
-    },
-    {
-        title: 'Bài học 4',
-        lessons: [
-            { title: 'Bài học 4.1', time: 8.25 },
-            { title: 'Bài học 4.2', time: 8.25 },
-            { title: 'Bài học 4.3', time: 9.25 },
-            { title: 'Bài học 4.4', time: 15.25 }
+            { title: 'Bài học 2.1', time: 8.25, type: 'video' },
+            { title: 'Bài học 2.2', time: 8.25, type: 'docs' },
+            { title: 'Bài học 2.3', time: 9.25, type: 'video' },
+            { title: 'Bài học 2.4', time: 15.25, type: 'quiz' }
         ]
     }
 ]
