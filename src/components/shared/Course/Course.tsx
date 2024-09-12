@@ -23,7 +23,7 @@ const Course: React.FC = () => {
         }
 
         if (viewportWidth - cardRect.right < threshold) {
-            setHoverDirection('md:left-[-14rem] left-[-12rem]')
+            setHoverDirection('md:left-[-14rem] left-[-9rem]')
         } else {
             setHoverDirection('left-full')
         }
@@ -31,13 +31,13 @@ const Course: React.FC = () => {
 
     return (
         <div
-            className="relative group w-full lg:max-w-[97%] lg:mx-auto p-2 bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300"
+            className="relative group w-full lg:max-w-[97%] rounded-md lg:mx-auto p-2 bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300"
             onMouseEnter={handleMouseEnter}
         >
             <div className="z-10">
                 <div className="lg:max-w-[300px] md:max-w-[300px]">
                     <img
-                        className="w-full object-cover"
+                        className="w-full object-cover rounded"
                         src="https://img-b.udemycdn.com/course/240x135/2776760_f176_10.jpg"
                         alt="Course Image"
                     />
@@ -64,7 +64,7 @@ const Course: React.FC = () => {
                 </div>
             </div>
             <div
-                className={`absolute top-0 ${hoverDirection} top-[50%] translate-y-[-50%] -left-2 shadow-sm invisible group-hover:visible duration-300 ease-in-out opacity-0 group-hover:opacity-100 bg-white p-4 border border-gray-300 group-hover:z-40 md:w-56 w-48`}
+                className={`absolute top-0 ${hoverDirection} top-[50%] translate-y-[-50%] -left-2 shadow-sm invisible group-hover:visible duration-300 ease-in-out opacity-0 group-hover:opacity-100 bg-white p-4 border border-gray-300 group-hover:z-40 md:w-56 w-[150px]`}
             >
                 <h2 className="md:text-TMD text-TSM font-bold text-black line-clamp-3">
                     100 Days of Code: The Complete Python Pro Bootcamp
@@ -83,7 +83,7 @@ const Course: React.FC = () => {
                     Master Python by building 100 projects in 100 days. Learn data science, automation, build websites,
                     games and apps!
                 </p>
-                <Button size="md" variant="primary" className="w-full text-white">
+                <Button size="md" variant="primary" className="mx-auto md:w-full !text-white text-TSM md:text-TLG">
                     Xem chi tiết
                 </Button>
             </div>
