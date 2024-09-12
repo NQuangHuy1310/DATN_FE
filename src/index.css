@@ -81,7 +81,12 @@
     .clip-path {
         clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
     }
-
+    /* Config navlink */
+    .active {
+        background-color: #ebf1ff;
+        display: block;
+        border-radius: 5px;
+    }
     /* Config scrollbar */
     ::-webkit-scrollbar {
         width: 6px;
