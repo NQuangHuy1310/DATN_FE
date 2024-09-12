@@ -57,6 +57,12 @@
     --interactive-primary: #0056d2; /* Màu chính */
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @layer base {
     /* Css cho menu */
     .hover-trigger:hover .hover-trigger-content {
