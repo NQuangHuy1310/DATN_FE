@@ -6,6 +6,7 @@ const routes = {
     verify: '/Xac-thuc',
     profile: '/Cai-dat/Thong-tin-ca-nhan',
     detailCourse: '/Khoa-hoc/:slug',
+    lealingCourse: '/Hoc-tap/:slug',
     myCourse: '/Khoa-hoc-cua-toi',
     wishList: '/Khoa-hoc-yeu-thich'
 }
