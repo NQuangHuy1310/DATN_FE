@@ -4,6 +4,9 @@ export default {
     darkMode: 'class',
     theme: {
         extend: {
+            transitionTimingFunction: {
+                custom: 'cubic-bezier(0.2, 0, 0.38, 0.9)'
+            },
             spacing: {
                 xs: '4px',
                 md: '8px',
