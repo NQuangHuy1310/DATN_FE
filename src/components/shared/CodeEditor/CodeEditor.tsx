@@ -11,10 +11,10 @@ type EditorType = monaco.editor.IStandaloneCodeEditor | null
 
 const CodeEditor: React.FC = () => {
     const [tab, setTab] = useState('1')
-    const editorRef = useRef<EditorType>(null)
     const [output, setOutput] = useState<string[] | null>(null)
-    const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+    const editorRef = useRef<EditorType>(null)
 
     const onMount = (editor: monaco.editor.IStandaloneCodeEditor) => {
         editorRef.current = editor
