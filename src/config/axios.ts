@@ -7,7 +7,7 @@ import { MessageErrors } from '../constants/errorConstant'
 
 const axiosConfig = axios.create({
     withCredentials: true,
-    baseURL: ''
+    baseURL: 'http://127.0.0.1:8000/api'
 })
 
 axiosConfig.interceptors.request.use(
