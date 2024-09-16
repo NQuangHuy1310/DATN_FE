@@ -8,7 +8,7 @@ import Input from '~/components/ui/input/Input'
 const Footer = () => {
     return (
         <footer className="bg-[url('https://bizweb.dktcdn.net/100/453/393/themes/894913/assets/bg_footer.png?1707187039390')] bg-cover bg-center bg-[#000] py-10">
-            <div className="max-w-5xl mx-auto grid grid-cols-12 gap-8 px-5 md:gap-16 md:px-10">
+            <div className="max-w-screen-xl mx-auto grid grid-cols-12 gap-8 px-5 md:gap-16 md:px-10">
                 <div className="lg:col-span-4 col-span-12">
                     <div className="md:max-w-[230px] max-w-[150px]">
                         <img

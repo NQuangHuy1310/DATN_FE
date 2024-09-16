@@ -16,8 +16,6 @@ import ForgotPassword from '~/pages/Auth/ForgotPassword'
 import TeacherLayout from '~/layouts/TeacherLayout'
 import ProfileTeacher from '~/pages/User/Lecturer/LecturerProfile'
 import UserProfile from '~/pages/User/Student/Profile'
-import Photo from '~/pages/User/Student/Photo'
-import Security from '~/pages/User/Student/Security'
 
 // Routes không cần đăng nhập vẫn vào được
 export const publicRoutes = [
@@ -31,9 +29,7 @@ export const publicRoutes = [
     { path: config.routes.detailCourse, layout: HomeLayout, element: DetailCourse },
     { path: config.routes.lealingCourse, layout: CourseLayout, element: LeaningCourse },
     { path: config.routes.myCourse, layout: HomeLayout, element: MyCourse },
-    { path: config.routes.wishList, layout: HomeLayout, element: WishList },
-    { path: config.routes.photo, layout: ProfileLayout, element: Photo },
-    { path: config.routes.security, layout: ProfileLayout, element: Security }
+    { path: config.routes.wishList, layout: HomeLayout, element: WishList }
 ]
 
 // Route cần đăng nhập mới vào được
