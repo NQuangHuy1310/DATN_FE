@@ -7,7 +7,7 @@ const TeacherLayout = ({ children }: { children: React.ReactNode }) => {
             <Header />
             <main>
                 <Sidebar />
-                <div className="max-w-5xl pt-10 mb-18 ml-72">{children}</div>
+                <div className="pt-10 mb-18 mx-60 flex-1">{children}</div>
             </main>
         </div>
     )
