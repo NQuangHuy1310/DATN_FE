@@ -11,7 +11,8 @@ const routes = {
     myCourse: '/Khoa-hoc-cua-toi',
     wishList: '/Khoa-hoc-yeu-thich',
     photo: '/Cai-dat/Anh',
-    security: '/Cai-dat/Tai-khoan'
+    security: '/Cai-dat/Tai-khoan',
+    homeTeacher: '/Giang-vien/Khoa-hoc'
 }
 
 export default routes
